@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="../../base/vue.min.js"></script>
+    <link rel="stylesheet" href="../../base/animate.css">
 </head>
 <body>
+<!--运用animate.css实现动画-->
+<div id="app-1">
+    <button @click="show = !show">
+        Toggle render
+    </button>
+    <transition
+            name="custom-classes-transition"
+            enter-active-class="animated wobble"
+            leave-active-class="animated bounceOutRight"
+    >
+        <p v-if="show">hello</p>
+    </transition>
+</div>
+
 
 <script src="main.js"></script>
 </body>
