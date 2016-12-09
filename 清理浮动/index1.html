@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一种</title>
+    <style>
+        #box {
+            border: solid;
+            zoom: 1;
+            /*处理兼容*/
+        }
+
+        #box:after{
+            clear: both;
+            content: ".";
+            display: block;
+            width: 0;
+            height: 0;
+            visibility: hidden;
+        }
+
+        .con {
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+
+        .con1 {
+            background: red;
+        }
+
+        .con2 {
+            background: green;
+        }
+
+        .con3 {
+            background: blue;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="con con1"></div>
+    <div class="con con2"></div>
+    <div class="con con3"></div>
+</div>
+</body>
+</html>

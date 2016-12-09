@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../base/vue.min.js"></script>
+</head>
+<body>
+<!--简单-->
+<div id="app-1">
+    <button @click="counter +=1">点击加一</button>
+    <p>{{counter}}</p>
+</div>
+
+<!--自定义事件处理器-->
+<div id="app-2">
+    <button @click="hello">hello</button>
+</div>
+
+<!--内联处理器-->
+<div id="app-3">
+    <button @click="say('hello')">say hello</button>
+</div>
+
+<!--按键事件-->
+<div id="app-4">
+    <input @keyup.enter="test" type="submit">
+</div>
+
+<!--复选框-->
+<div id="app-5">
+    <input type="checkbox" id="a" value="a" v-model="checkedNames">
+    <label for="a">a</label>
+    <input type="checkbox" id="b" value="b" v-model="checkedNames">
+    <label for="b">b</label>
+    <p>checkedName:{{checkedNames}}</p>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

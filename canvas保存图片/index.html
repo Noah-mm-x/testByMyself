@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #ta-chat-out {
+            width: 700px;
+            height: 700px;
+            border: 1px solid black;
+            overflow: scroll;
+        }
+
+        #form-chat-input input[name='name'] {
+            width: 300px;
+        }
+
+        canvas {
+            background-color: lavender;
+        }
+    </style>
+
+
+</head>
+<body>
+<div>
+</div>
+<div>
+    <form id="form-chat-input">
+        <div>
+            <label>
+                <span>用户</span>
+                <input type="text" required="required" name="name">
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>图画</span>
+                <canvas id="canvas" width="500" height="500"></canvas>
+            </label>
+            <input id="aa" type="submit" value="发送">
+        </div>
+    </form>
+    <button id="btn">图片</button>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

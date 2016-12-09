@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>each</title>
+    <script src="../base/jquery-3.1.0.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .blueBg {
+            background: blue;
+        }
+
+        .whiteBg {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>内容一</li>
+    <li>内容二</li>
+    <li>内容三</li>
+</ul>
+</body>
+<script>
+    $(function () {
+        var timer = null;
+        $("ul li").each(function (i) {
+            $(this).hover(function () {
+                var curLi = $(this);
+                timer = setTimeout(function () {
+                    curLi.removeClass("whiteBg").addClass("blueBg");
+                    console.log(i);
+                });
+            }, function () {
+                clearTimeout(timer);
+                $(this).removeClass("blueBg").addClass("whiteBg");
+            })
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>划入显示详细信息</title>
+    <script src="../base/jquery-3.1.0.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .img {
+            width: 250px;
+            height: 200px;
+            border: 0;
+            display: block;
+        }
+
+        .con {
+            width: 250px;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .showDetails {
+            width: 250px;
+            height: 200px;
+            background: #abcdef;
+            text-align: center;
+            line-height: 200px;
+            color: darkmagenta;
+        }
+    </style>
+</head>
+<body>
+<ul id="box">
+    <li class="con con1">
+        <img src="../images/1.jpg" class="img img1">
+        <div class="showDetails showDetails1">
+            美女一
+        </div>
+    </li>
+    <li class="con con2">
+        <img src="../images/2.jpg" class="img img2">
+        <div class="showDetails showDetails2">
+            美女二
+        </div>
+    </li>
+</ul>
+</body>
+<script>
+    $(function () {
+
+        var moveHeight = 200,
+                moveTime = 200,
+                timer = null;
+
+        $("#box li").hover(function () {
+            var curLi = $(this);
+            timer = setTimeout(function () {
+                curLi.children(".img").animate({marginTop: -moveHeight + "px"}, moveTime);
+            }, moveTime)
+        }, function () {
+            clearTimeout(timer);
+            $(this).children(".img").animate({marginTop: 0 + "px"}, moveTime);
+        })
+    });
+</script>
+</html>

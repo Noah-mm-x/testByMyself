@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../base/vue.min.js"></script>
+</head>
+<body>
+<!--简单渲染-->
+<div id="app-1">
+    <ul>
+        <li v-for="i in list">{{i.message}}</li>
+    </ul>
+</div>
+
+<!--带有索引渲染-->
+<div id="app-2">
+    <ul>
+        <li v-for="(i,index) in list">{{family}}-{{index}}-{{i.firstName}}</li>
+    </ul>
+</div>
+
+<!--模板 渲染-->
+<!--<div id="app-3">-->
+    <!--<goodslist></goodslist>-->
+<!--</div>-->
+<script src="main.js"></script>
+</body>
+</html>

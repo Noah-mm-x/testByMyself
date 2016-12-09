@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航</title>
+    <script src="../base/jquery-3.1.0.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul li {
+            font-size: 24px;
+            color: coral;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>晨落梦公子</li>
+    <li>晨落梦公子</li>
+    <li>晨落梦公子</li>
+    <li>晨落梦公子</li>
+</ul>
+</body>
+<script>
+    $(function () {
+        var timer = null;
+        $("ul li").each(function (i) {
+            var oli = $(this);
+            $(this).hover(function () {
+                timer = setTimeout(function () {
+                    oli.animate({fontSize: "48px",color:"#abcdef"}, 500);
+                }, 500);
+            }, function () {
+                clearTimeout(timer);
+                $(this).animate({fontSize: "24px",color:"coral"}, 500);
+            })
+        })
+
+    })
+</script>
+</html>

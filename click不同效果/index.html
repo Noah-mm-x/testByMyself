@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../base/jquery-3.1.0.js"></script>
+</head>
+<body>
+<script>
+        var colors = ["red", "blue", "green"];
+        var div = $("<div></div>").css({width: "100px", height: "100px"});
+        function cloneDiv(num) {
+            for (var i = 0; i < num; i++) {
+                var odiv = div.clone();
+                odiv.css("background", colors[i]);
+                $("body").append(odiv);
+                odiv.on("click", function () {
+                    console.log(this);
+                })
+            }
+        }
+        cloneDiv(colors.length);
+
+</script>
+</body>
+</html>

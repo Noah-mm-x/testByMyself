@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D旋转</title>
+    <script src="../base/jquery-3.1.0.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #box {
+            position: relative;
+            top: 200px;
+            left: 500px;
+
+        }
+
+        #box li {
+            width: 100px;
+            height: 100px;
+            color: darkcyan;
+            border-radius: 50%;
+            line-height: 100px;
+            text-align: center;
+            font-size: 48px;
+            position: absolute;
+        }
+
+        #box li:nth-child(1) {
+            top:10px;
+            left: 20px;
+            background: coral;
+            z-index: 1;
+        }
+
+        #box li:nth-child(2) {
+            top:10px;
+            left: 100px;
+            background: darkmagenta;
+            z-index: 2;
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+        }
+
+        #box li:nth-child(3) {
+            top:10px;
+            left: 180px;
+            background: saddlebrown;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<ul id="box">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+</body>
+</html>

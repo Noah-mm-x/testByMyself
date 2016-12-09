@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聚光灯效果</title>
+    <script src="../base/jquery-3.1.0.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul {
+        }
+
+        ul:after {
+            content: "";
+            display: block;
+            visibility: hidden;
+            height: 0;
+            width: 0;
+            clear: both;
+        }
+
+        li {
+            float: left;
+        }
+
+        .opacityBg {
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="../images/1.jpg"></li>
+    <li><img src="../images/2.jpg"></li>
+    <li><img src="../images/3.jpg"></li>
+    <li><img src="../images/4.jpg"></li>
+</ul>
+</body>
+<script>
+    $(function () {
+
+        $("ul li ").hover(function () {
+            $(this).siblings().addClass("opacityBg");
+        }, function () {
+            $(this).siblings().removeClass("opacityBg");
+        });
+
+    })
+</script>
+</html>

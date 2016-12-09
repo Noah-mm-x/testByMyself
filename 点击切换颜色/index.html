@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击处切换颜色</title>
+    <script src="../base/jquery-3.1.0.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 300px;
+            height: 200px;
+            background: coral;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+<script>
+    var flag = true;
+    $("#box").click(function () {
+        if (flag) {
+            $(this).css({
+                background: "#abcdef"
+            });
+            flag = !flag;
+        } else {
+            $(this).css({
+                background: "coral"
+            });
+            flag = !flag;
+        }
+
+    })
+</script>
+</html>

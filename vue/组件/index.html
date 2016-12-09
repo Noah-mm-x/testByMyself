@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../base/vue.min.js"></script>
+</head>
+<body>
+<!--全局组件-->
+<div id="app-1">
+    <app1-component></app1-component>
+</div>
+
+<!--局部注册-->
+<div id="app-2">
+    <app2-component></app2-component>
+</div>
+
+<!--解析限制-->
+<div id="app-3">
+    <table>
+        <!--下面两个的区别，浏览器中检查即可看出-->
+        <!--第一个没在table里面-->
+        <app3-component></app3-component>
+        <tr is="app3-component"></tr>
+    </table>
+</div>
+
+<!--data必须是函数-->
+<div id="app-4">
+    <app4-component></app4-component>
+</div>
+
+<!--父子传递-->
+<div id="app-5">
+    <app5-component message="meng"></app5-component>
+    <br>
+    <input type="text" v-model="msg">
+    <app5-component :message="msg"></app5-component>
+</div>
+
+<!--事件绑定-->
+<div id="app-6">
+    <p>{{total}}</p>
+    <app6-component v-on:clicktoadd="incrementTotal"></app6-component>
+    <app6-component v-on:clicktoadd="incrementTotal"></app6-component>
+</div>
+
+<!--slot复用-->
+<div id="app-7">
+    <app7-component>
+        <h1 slot="header">晨梦网</h1>
+        <p>内容1</p>
+        <p>内容2</p>
+        <p>内容3</p>
+        <p slot="footer">底部</p>
+    </app7-component>
+</div>
+
+<!--自己写-->
+<div id="app-8">
+    <app8-component v-for="i in list" v-bind:content="i"></app8-component>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

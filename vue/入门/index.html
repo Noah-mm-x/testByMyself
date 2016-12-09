@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../base/vue.min.js"></script>
+</head>
+<body>
+<!--基础绑定数据-->
+<div id="app-1">{{message}}</div>
+
+<!--绑定属性-->
+<div id="app-2"><span v-bind:title="message">hello</span></div>
+
+<!--元素显示与否-->
+<div id="app-3"><p v-if="show">you can see me</p></div>
+
+<!--循环遍历数据-->
+<div id="app-4">
+    <ol>
+        <li v-for="todo in todos">{{todo.text}}</li>
+    </ol>
+</div>
+
+<!--监听事件-->
+<div id="app-5">
+    <p>{{message}}</p>
+    <button v-on:click="reverseMessage">反转信息</button>
+</div>
+
+<!--input数据绑定-->
+<div id="app-6">
+    <p>{{message}}</p>
+    <input v-model="message">
+</div>
+
+<!--模板-->
+<div id="app-7">
+    <ol>
+        <item v-for="i in list" v-bind:content="i"></item>
+    </ol>
+</div>
+
+<!--过滤器-->
+<div id="app-8">
+    <p>{{message|firstToUpCase}}</p>
+</div>
+
+<!--计算属性与方法的区别-->
+<div id="app-9">
+    <p>{{methodsReturn}}</p>
+    <p>{{computedReturn}}</p>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
