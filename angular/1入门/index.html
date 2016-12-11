@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../base/angular.js"></script>
+    <script src="../../base/angular-route.js"></script>
+</head>
+<body>
+<!--<div ng-app="">-->
+<!--<p>名字：<input type="text" ng-model="name"></p>-->
+<!--<p>{{name}}</p>-->
+<!--</div>-->
+
+<div ng-app="app">
+    <div ng-controller="ctrl">
+        <label>
+            姓名:
+            <input type="text" ng-model="name">
+        </label>
+        <p>姓名：{{name}}</p>
+        <meng></meng>
+    </div>
+    <div ng-controller="ctrl1">
+        <p>{{name}}</p>
+    </div>
+    <div ng-controller="ctrl2">
+        <ul>
+            <li ng-repeat="i in list">
+                name:{{i.name}},age:{{i.age}}
+            </li>
+        </ul>
+    </div>
+    <div ng-controller="ctrl3">
+        <p>{{myUrl}}</p>
+    </div>
+    <div ng-controller="ctrl4">
+        <p>{{otherData}}</p>
+    </div>
+    <div ng-controller="ctrl5">
+        <p>{{say}}</p>
+    </div>
+    <div ng-controller="ctrl6">
+        <p>{{now}}</p>
+    </div>
+    <div ng-controller="ctrl7">
+        <p>{{num}}</p>
+        <p>{{1|addOneFilter}}</p>
+    </div>
+    <div ng-controller="ctrl8">
+        <ul>
+            <li ng-repeat="i in names">{{i.name}}</li>
+        </ul>
+    </div>
+    <div ng-controller="ctrl9">
+        <select ng-model="a" ng-options="i for i in names"></select>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
