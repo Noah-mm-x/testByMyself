@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../base/angular.js"></script>
+</head>
+<body>
+<div ng-app="app" ng-controller="ctrl">
+    <p>{{data.name}}</p>
+    <div ng-if="data.show">
+        <input type="text" ng-model="data.name">
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

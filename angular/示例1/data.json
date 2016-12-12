@@ -1,0 +1,76 @@
+{
+  "questions": [
+    {
+      "question": "a?",
+      "type": "single",
+      "answers": [
+        {
+          "answer": "A",
+          "description": "a is right?"
+        },
+        {
+          "answer": "B",
+          "description": "b is right?"
+        },
+        {
+          "answer": "C",
+          "description": "c is right?"
+        },
+        {
+          "answer": "D",
+          "description": "d is right?"
+        }
+      ],
+      "correct": "B"
+    },
+    {
+      "question": "aa?",
+      "type": "single",
+      "answers": [
+        {
+          "answer": "A",
+          "description": "aa is right?"
+        },
+        {
+          "answer": "B",
+          "description": "bb is right?"
+        },
+        {
+          "answer": "C",
+          "description": "cc is right?"
+        },
+        {
+          "answer": "D",
+          "description": "dd is right?"
+        }
+      ],
+      "correct": "C"
+    },
+    {
+      "question": "b?",
+      "type": "more",
+      "answers": [
+        {
+          "answer": "A",
+          "description": "a is right?"
+        },
+        {
+          "answer": "B",
+          "description": "b is right?"
+        },
+        {
+          "answer": "C",
+          "description": "c is right?"
+        },
+        {
+          "answer": "D",
+          "description": "d is right?"
+        }
+      ],
+      "correct": [
+        "A",
+        "B"
+      ]
+    }
+  ]
+}

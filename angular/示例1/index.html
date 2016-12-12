@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../base/angular.js"></script>
+    <script src="../../base/angular-route.js"></script>
+</head>
+<body>
+<div ng-app="questions" ng-controller="ctrl">
+    <div ng-repeat="q in questions">
+        <h1>{{q.question}}</h1>
+        <div ng-if="q.type=='single'" ng-repeat="a in q.answers">
+            <label>
+                <input type="radio" name="singleAnswer" value="{{a.answer}}">
+                <span>选项：{{a.answer}}、{{a.description}}</span>
+            </label>
+        </div>
+        <div ng-if="q.type =='more'" ng-repeat="a in q.answers">
+            <label>
+                <input type="checkbox" value="{{a.answer}}">
+                <span>选项：{{a.answer}}、{{a.description}}</span>
+            </label>
+        </div>
+    </div>
+    <button id="score" ng-click="isCorrectAnswer()">计算分数</button>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

@@ -55,6 +55,15 @@
     <div ng-controller="ctrl9">
         <select ng-model="a" ng-options="i for i in names"></select>
     </div>
+    <div ng-controller="ctrl10">
+        <table>
+            <tr ng-repeat="i in students | orderBy : 'age'">
+                <td>{{$index+1}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.age}}</td>
+            </tr>
+        </table>
+    </div>
 </div>
 
 <script src="main.js"></script>

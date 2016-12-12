@@ -63,6 +63,12 @@
     app.controller("ctrl9",function ($scope) {
         $scope.names = ["a","b","c"];
     });
+    app.controller("ctrl10",function ($scope,$http) {
+        $http.get("data.json").success(function (response) {
+            $scope.students=response.students;
+            console.log($scope.students);
+        });
+    });
     app.directive("meng", function () {
         return {
             template: "<h1>meng</h1>"
