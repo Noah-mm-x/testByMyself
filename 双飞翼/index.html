@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .fix{
+            float: left;
+        }
+        .left{
+            background-color: red;
+            width: 150px;
+            margin-left: -100%;
+        }
+        .main{
+            background-color: cornflowerblue;
+            width: 100%;
+        }
+        .right{
+            background-color: chartreuse;
+            width: 200px;
+            margin-left: -200px;
+        }
+        .inner{
+            margin-left: 150px;
+            margin-right: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="main fix"><div class="inner">中间</div></div>
+    <div class="left fix">左边</div>
+    <div class="right fix">右边</div>
+</div>
+</body>
+</html>

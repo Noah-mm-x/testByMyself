@@ -19,7 +19,5 @@
             return ++j;
         }
     }
-    var e=d;
-    console.log(e(2)());
-    console.log(e(2)());
+    console.log(d(2)());
 })();
