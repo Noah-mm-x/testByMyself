@@ -10,6 +10,5 @@
             })
         }
     });
-
     $("input[type='checkbox']").check();
 })(jQuery);
