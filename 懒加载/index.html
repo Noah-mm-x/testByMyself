@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="../base/jquery.js"></script>
+	<script src="../base/jquery.lazyload.js"></script>
+</head>
+<body>
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+<img class="lazy" data-original="../images/1.jpg" width="640" height="480">
+<script>
+	$(function () {
+		$("img.lazy").lazyload({
+			threshold: 200,
+			effect: "fadeIn",
+			failure_limit: 10
+		});
+	})
+</script>
+</body>
+</html>

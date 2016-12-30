@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="css/pagination.css">
+	<script src="../../base/jquery.js"></script>
+	<script src="js/jquery.pagination.js"></script>
+</head>
+<body>
+<div id="box"></div>
+<script>
+	$("#box").pagination({
+		pageCount:50,
+		jump:true,
+		coping:true,
+		homePage:'首页',
+		endPage:'末页',
+		preContent:'上页',
+		nextContent:'下页'
+	})
+</script>
+</body>
+</html>
