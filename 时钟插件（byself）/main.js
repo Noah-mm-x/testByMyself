@@ -18,7 +18,7 @@ $(function () {
             hou = Math.floor(mil / 1000 / 60 / 60);
             return [$meng.formatNum(hou), $meng.formatNum(min), $meng.formatNum(sec)].join(":");
         },
-        //动态的数码钟表
+        //数码钟表
         digitalClock: function () {
             return $meng.formatTime($meng.getNowTimeMillisecond());
         },

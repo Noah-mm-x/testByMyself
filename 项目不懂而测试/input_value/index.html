@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="txt">
+<input type="button" id="btn" value="点击切换">
+<script>
+    var ran,
+        txt=document.getElementById('txt'),
+        btn=document.getElementById('btn'),
+        arr=['a','b','c','d','e'];
+    txt.value=arr[0];
+    btn.addEventListener('click',function (e) {
+        e.preventDefault();
+        ran=Math.floor(Math.random()*arr.length);
+        txt.value=arr[ran];
+    })
+</script>
+</body>
+</html>
