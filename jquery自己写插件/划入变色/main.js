@@ -19,6 +19,6 @@
             })
         });
     };
-    $("#box").changeColor();
+    $("#box").changeColor({});
 
 })(jQuery);
