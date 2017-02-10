@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="../../base/jquery-3.1.0.js"></script>
+</head>
+<body>
+<div class="box"></div>
+<script>
+
+    var $box = $(".box"), childrenLength;
+    function repeater(maxNum, callback) {
+        function n() {
+            $box.append(create());
+            childrenLength = $box.children().length;
+            childrenLength < maxNum ? requestAnimationFrame(n) : callback();
+        }
+
+        n();
+    }
+
+    function create() {
+        return $("<p>meng</p>");
+    }
+
+    setInterval(function () {
+        repeater(100, function () {
+            $box.html("");
+        })
+    }, 2000);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>哎</title>
+	<script src="../../base/jquery-3.1.0.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.box {
+			margin-top: 20px;
+			width: 500px;
+			height: 100px;
+			background-color: coral;
+		}
+
+		.animate {
+			transition: all 1s;
+			-webkit-transition: all 1s;
+		}
+
+		.extendHeight {
+			height: 300px;
+		}
+
+		.reduceHeight {
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+<div class="box animate"></div>
+<div class="box animate"></div>
+<div class="box animate"></div>
+<script>
+    var box = $('.box');
+    var clickToExtend = function (callback) {
+        box.click(function () {
+            var _self = $(this);
+            _self.addClass('extendHeight').removeClass('reduceHeight');
+            setTimeout(function () {
+                callback(_self);
+            },1000);
+        });
+    };
+
+    function extend(n) {
+        n.siblings().addClass('reduceHeight').removeClass('extendHeight');
+    }
+    clickToExtend(extend);
+</script>
+</body>
+</html>
