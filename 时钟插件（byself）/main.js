@@ -3,7 +3,7 @@
  */
 $(function () {
 
-    var $meng=$.fn;
+    var $meng = $.fn;
     $meng.extend({
         /**
          *
@@ -30,7 +30,7 @@ $(function () {
         //前面添0
         formatNum: function (num) {
             num = parseInt(num);
-            return num > 10 ? num : "0" + num;
+            return num < 10 ? "0" + num : num;
         }
     });
 

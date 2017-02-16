@@ -16,6 +16,6 @@ $(function () {
     };
 
     $('#box').changeColor({
-        'color':'green'
+        'color':'blue'
     });
 });
