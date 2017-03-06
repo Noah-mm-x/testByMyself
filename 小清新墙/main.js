@@ -48,7 +48,10 @@
         };
         var events = {
             drag: function () {
-                var offsetX, offsetY, mouseX = $this.position().left, mouseY = $this.position().top;
+                var offsetX, offsetY,
+                    mouseX = $this.position().left,
+                    mouseY = $this.position().top;
+
                 $this.on('mousedown', function (e) {
                     offsetX = mouseX - e.pageX;
                     offsetY = mouseY - e.pageY;

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<svg
+		xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		width="112px" height="60px">
+	<defs>
+		<filter filterUnits="userSpaceOnUse" id="Filter_0" x="53px" y="0px" width="59px" height="60px"  >
+			<feOffset in="SourceAlpha" dx="0" dy="0" />
+			<feGaussianBlur result="blurOut" stdDeviation="2.236" />
+			<feFlood flood-color="rgb(191, 180, 180)" result="floodOut" />
+			<feComposite operator="atop" in="floodOut" in2="blurOut" />
+			<feComponentTransfer><feFuncA type="linear" slope="0.75"/></feComponentTransfer>
+			<feMerge>
+				<feMergeNode/>
+				<feMergeNode in="SourceGraphic"/>
+			</feMerge>
+		</filter>
+
+	</defs>
+	<path fill-rule="evenodd"  fill="rgb(20, 203, 165)"
+		  d="M21.566,6.125 L72.992,6.125 C84.903,6.125 94.558,16.020 94.558,28.225 L94.558,30.775 C94.558,42.980 84.903,52.875 72.992,52.875 L21.566,52.875 C9.655,52.875 -0.000,42.980 -0.000,30.775 L-0.000,28.225 C-0.000,16.020 9.655,6.125 21.566,6.125 Z"/>
+	<g filter="url(#Filter_0)">
+		<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+			  d="M82.116,4.000 C95.859,4.000 107.000,15.417 107.000,29.500 C107.000,43.583 95.859,55.000 82.116,55.000 C68.373,55.000 57.233,43.583 57.233,29.500 C57.233,15.417 68.373,4.000 82.116,4.000 Z"/>
+	</g>
+	<text font-family="Arial" fill="rgb(255, 255, 255)" transform="matrix( 2.32608853438996, 0, 0, 2.31818635418903,16.9387948096128, 37.1136522396616)" font-size="9px">ON</text>
+</svg>
+<svg
+		xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		width="30.5px" height="30.5px">
+	<path fill-rule="evenodd"  stroke="rgb(255, 85, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+		  d="M14.682,1.094 C22.500,1.094 28.838,7.368 28.838,15.106 C28.838,22.845 22.500,29.118 14.682,29.118 C6.864,29.118 0.526,22.845 0.526,15.106 C0.526,7.368 6.864,1.094 14.682,1.094 Z"/>
+	<path fill-rule="evenodd"  fill="rgb(255, 72, 72)"
+		  d="M19.959,12.436 L17.191,15.216 L19.766,17.805 C20.458,18.501 20.461,19.626 19.773,20.319 C19.085,21.011 17.966,21.007 17.274,20.311 L14.697,17.720 L12.234,20.193 C11.556,20.875 10.458,20.878 9.783,20.200 C9.109,19.522 9.112,18.421 9.791,17.739 L12.255,15.264 L9.396,12.389 C8.704,11.693 8.701,10.567 9.389,9.875 C10.078,9.183 11.197,9.186 11.889,9.883 L14.749,12.760 L17.515,9.983 C18.194,9.301 19.291,9.298 19.966,9.975 C20.641,10.653 20.638,11.755 19.959,12.436 Z"/>
+</svg>
+</body>
+</html>
