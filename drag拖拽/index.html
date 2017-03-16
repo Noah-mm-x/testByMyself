@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拖拽</title>
+	<script src="../base/jquery-3.1.0.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		ul{
+			width: 400px;
+			min-height: 400px;
+			background-color: #abcdef;
+		}
+		ul li{
+			float: left;
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			background-color: #c2ae0e;
+			font-size: 68px;
+			color: chocolate;
+			text-align: center;
+			line-height: 100px;
+			user-select: none;
+		}
+	</style>
+</head>
+<body>
+<ul>
+	<li class="li-one" draggable="true">1</li>
+	<li class="li-two" draggable="true">2</li>
+	<li class="li-three" draggable="true">3</li>
+	<li class="li-four" draggable="true">4</li>
+	<li class="li-five" draggable="true">5</li>
+</ul>
+<script>
+	$('ul li').on('dragstart',function (e) {
+	    console.log($(this));
+		e.originalEvent.dataTransfer.setData('text/plain',$(this).attr('class'));
+    });
+	$('ul').on('dragover',function (e) {
+		e.preventDefault();
+    }).on('drop',function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		var ele = $('.'+e.originalEvent.dataTransfer.getData("text/plain"));
+		if(ele.parent().find(ele).length){
+		    ele.remove();
+		}
+		$(this).append(ele);
+    });
+</script>
+</body>
+</html>
