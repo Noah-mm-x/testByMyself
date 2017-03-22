@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>锁</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.box {
+			width: 200px;
+			height: 200px;
+			transition: all 3s;
+			-webkit-transition: all 3s;
+		}
+
+		.color1 {
+			background-color: #985f0d;
+		}
+
+		.color2 {
+			background-color: #0BB995;
+		}
+	</style>
+	<script src="../base/jquery-3.1.0.js"></script>
+</head>
+<body>
+<div class="box color1"></div>
+<a class="btn" href="javascript:;">点我移动</a>
+<script>
+    $(function () {
+        var box = $('.box'),
+            btn = $('.btn'),
+            changing = false;
+
+        btn.click(function () {
+            if (changing) return false;
+            changing = true;
+
+            if (box.hasClass('color1')) {
+                box.removeClass('color1').addClass('color2');
+                box.on('webkitTransitionEnd otransitionend transitionend', function () {
+                    changing = false;
+                })
+            } else if (box.hasClass('color2')) {
+                box.removeClass('color2').addClass('color1');
+                box.on('webkitTransitionEnd otransitionend transitionend', function () {
+                    changing = false;
+                })
+            }
+        })
+    })
+</script>
+</body>
+</html>
