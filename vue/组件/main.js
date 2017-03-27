@@ -97,16 +97,16 @@
 
     var app7Component = {
         template: "<div class='container'>" +
-        "<header>" +
-        "<slot name='header'></slot>" +
-        "</header>" +
-        "<main>" +
-        "<slot></slot>" +
-        "</main>" +
-        "<footer>" +
-        "<slot name='footer'></slot>" +
-        "</footer>" +
-        "</div>"
+                    "<header>" +
+                        "<slot name='header'></slot>" +
+                    "</header>" +
+                    "<main>" +
+                        "<slot></slot>" +
+                    "</main>" +
+                    "<footer>" +
+                        "<slot name='footer'></slot>" +
+                    "</footer>" +
+                  "</div>"
     };
     new Vue({
         el: "#app-7",
