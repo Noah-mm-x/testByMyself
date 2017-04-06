@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="../../base/vue.min.js"></script>
+	<style>
+		.a {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+
+		.b {
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+<div id="app">
+	<div class="a" @click='clickToShow()'></div>
+	<div class="b" v-if="show"></div>
+</div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            show: false
+        },
+        methods: {
+            clickToShow: function () {
+                this.show = true;
+            }
+        }
+    })
+</script>
+</html>
