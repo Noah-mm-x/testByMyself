@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		a[href^="http"]:empty::before {
+			content: attr(href);
+		}
+	</style>
+</head>
+<body>
+<a href="https://www.baidu.com/"></a>
+</body>
+</html>

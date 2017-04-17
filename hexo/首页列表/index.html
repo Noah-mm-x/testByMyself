@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>列表</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			text-decoration: none;
+		}
+
+		.clearfix {
+			zoom: 1;
+			/*处理兼容*/
+		}
+		.clearfix:after{
+			clear: both;
+			content: ".";
+			display: block;
+			width: 0;
+			height: 0;
+			visibility: hidden;
+		}
+
+		body {
+			background: url("../images/bg-01.jpg") 0 0 /cover fixed;
+		}
+
+		#full-screen {
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+			background-color: rgba(255, 255, 255, .84);
+			overflow-y: scroll;
+		}
+		.title{
+			font-weight: bold;
+			font-size: 24px;
+			color: #dad4b0;
+			margin-top: 30px;
+			margin-left: 40px;
+		}
+		.content{
+			margin-top: 10px;
+			margin-left: 45px;
+		}
+		.content li{
+			margin-top: 5px;
+		}
+		.content li a{
+			font-size: 16px;
+			color: #c29029;
+		}
+	</style>
+</head>
+<body>
+<div id="full-screen">
+	<p class="title">我的作品</p>
+	<ul class="content clearfix">
+		<li class="clearfix"><a href="">1、对方讲道理可使肌肤</a></li>
+		<li class="clearfix"><a href="">2、对方讲道理可使肌肤</a></li>
+		<li class="clearfix"><a href="">3、对方讲道理可使肌肤</a></li>
+		<li class="clearfix"><a href="">4、对方讲道理可使肌肤</a></li>
+		<li class="clearfix"><a href="">5、对方讲道理可使肌肤</a></li>
+		<li class="clearfix"><a href="">6、对方讲道理可使肌肤</a></li>
+		<li class="clearfix"><a href="">7、对方讲道理可使肌肤</a></li>
+	</ul>
+</div>
+</body>
+</html>

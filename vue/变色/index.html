@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="../../base/vue.min.js"></script>
+	<style>
+		.box{
+			width: 300px;
+			height: 300px;
+		}
+	</style>
+</head>
+<body>
+<div id="feng-app">
+	<div class="box"
+		 :style="{backgroundColor:color[num]}"
+		 @mousedown="changeColorTwo()"
+		 @mouseup="changeColorOne()">
+	</div>
+</div>
+<script>
+	var xu = new Vue({
+	    el:'#feng-app',
+		data:{
+	        num:0,
+	        color:['red','green']
+		},
+		methods:{
+	        changeColorOne:function () {
+				this.num = 0;
+            },
+            changeColorTwo:function () {
+                this.num = 1;
+            }
+		}
+	})
+
+</script>
+</body>
+</html>
