@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="../../base/jquery-3.1.0.js"></script>
+	<script src="../../base/vue.js"></script>
+	<!--<script src="../../base/vue.min.js"></script>-->
+	<script src="../../base/vue-resource.min.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		input {
+			margin-top: 100px;
+			margin-left: 100px;
+		}
+
+		table {
+			margin-top: 20px;
+			margin-left: 100px;
+		}
+
+		table tr {
+			text-align: center;
+		}
+
+		table th {
+			position: relative;
+			width: 100px;
+			user-select: none;
+		}
+
+		span.cart {
+			display: block;
+			position: absolute;
+			top: 5px;
+			left: 74px;
+			width: 0;
+			height: 0;
+			border-top: 0 none;
+			border-right: 5px solid transparent;
+			border-left: 5px solid transparent;
+			border-bottom: 10px solid red;
+		}
+
+		span.cart.active {
+			transform: rotate(180deg);
+			-webkit-transform: rotate(180deg);
+		}
+	</style>
+</head>
+<body>
+
+<div id="app">
+	<input type="text"
+		   v-model="search"
+	>
+	<table border="1" cellpadding="0" cellspacing="0">
+		<thead>
+		<tr>
+			<th @click="orderByName">姓名<span class="cart" :class="{'active':sortMode==-1}"></span></th>
+			<th @click="orderByAge">年龄<span class="cart" :class="{'active':sortMode==-1}"></span></th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr v-for="item in gridData | filterBy customFilter | orderBy sort sortMode">
+			<td>{{item.name}}</td>
+			<td>{{item.age}}</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

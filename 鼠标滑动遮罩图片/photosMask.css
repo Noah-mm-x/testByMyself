@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.photos-box {
+    margin: 200px auto;
+    width: 380px;
+    height: 380px;
+}
+
+.photos-box li {
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.photos-box li:nth-child(1) {
+    background: url("../images/1.jpg");
+    background-size: 100% 100%;
+}
+
+.photos-box li:nth-child(2) {
+    background: url("../images/2.jpg");
+    background-size: 100% 100%;
+}
+
+.photos-box li:nth-child(3) {
+    background: url("../images/3.jpg");
+    background-size: 100% 100%;
+}
+
+.photos-box li:nth-child(4) {
+    background: url("../images/4.jpg");
+    background-size: 100% 100%;
+}
+
+.photos-box li:nth-child(5) {
+    background: url("../images/5.jpg");
+    background-size: 100% 100%;
+}
+
+.photos-box li:nth-child(6) {
+    background: url("../images/6.jpg");
+    background-size: 100% 100%;
+}
+
+.photos-box li:nth-child(7) {
+    background: url("../images/7.jpg");
+    background-size: 100% 100%;
+}
+
+.photos-box li:nth-child(8) {
+    background: url("../images/8.jpg");
+    background-size: 100% 100%;
+}
+
+.photos-box li:nth-child(9) {
+    background: url("../images/9.jpg");
+    background-size: 100% 100%;
+}
+
+.slider-box {
+    position: fixed;
+    width: 98px;
+    height: 98px;
+    background-color: rgba(255, 255, 255, .4);
+    border: 1px solid #fff;
+    transition: all 400ms;
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -ms-transition: all 400ms;
+    -o-transition: all 400ms;
+}

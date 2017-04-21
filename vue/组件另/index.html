@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>组件</title>
+	<script src="../../base/vue.min.js"></script>
+</head>
+<body>
+<!--全局注册-->
+<div id="app-1">
+	<com1></com1>
+</div>
+
+<!--局部注册-->
+<div id="app-2">
+	<com1></com1>
+	<com2></com2>
+</div>
+
+<!--数据组件-->
+<div id="app-3">
+	<data-component></data-component>
+</div>
+
+<!--prop组件-->
+<div id="app-4">
+	<prop-component msg="prop"></prop-component>
+</div>
+
+<!--动态prop组件-->
+<div id="app-5">
+	<dynamic-prop :msg="info"></dynamic-prop>
+	<br>
+	<input type="text" v-model="info">
+</div>
+
+<!--自定义事件-->
+<div id="app-6">
+	<div>{{total}}</div>
+	<btn-counter @add="parentAddOne"></btn-counter>
+	<btn-counter @add="parentAddOne"></btn-counter>
+</div>
+
+<!--编译作用域-->
+<div id="app-7">
+	<scope-component :show="isShow"></scope-component>
+	<button @click="scopeHidden">{{msg}}</button>
+</div>
+
+<!--slot-->
+<div id="app-8">
+	<h1>我是主标题</h1>
+	<slot-component>
+		<p>我挡住了slot</p>
+	</slot-component>
+	<slot-component></slot-component>
+</div>
+
+<!--具名slot-->
+<div id="app-9">
+	<name-slot>
+		<div slot="header">header头部</div>
+		<p>内容一</p>
+		<p>内容二</p>
+		<div slot="footer">footer尾部 <p>ppp</p></div>
+	</name-slot>
+</div>
+
+<!--动态组件-->
+<div id="app-10">
+	<component :is="currentView"></component>
+</div>
+
+<!--组件套组件 -->
+<div id="app-11">
+	<xu1>
+		<xu2 :com-msg="msg" slot="xu">
+		</xu2>
+	</xu1>
+</div>
+
+<!--组件列表-->
+<div id="app-12">
+	<p>{{liData}}</p>
+	<list :com-items="items" @log-name="showLiContent"></list>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
