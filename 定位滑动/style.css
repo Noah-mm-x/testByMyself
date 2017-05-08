@@ -1,0 +1,29 @@
+.bk{
+	width: 100%;
+	height: 2000px;
+	background: url('../images/5.jpg');
+}
+.box{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	overflow: auto;
+}
+.box .content{
+	margin: 0 auto;
+	width: 500px;
+	height: 1500px;
+	background: url('../images/2.jpg');
+}
+.btn{
+	position: fixed;
+	bottom: 100px;
+	right: 100px;
+	color: #abcdef;
+	z-index: 10001;
+	background-color: coral;
+}

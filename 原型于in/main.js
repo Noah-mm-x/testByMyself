@@ -23,4 +23,5 @@
 
     person1.name = "晨落梦公子";
     console.log(person1.hasPrototypeProperty("name")); //false
+
 })();

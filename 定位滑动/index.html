@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="bk"></div>
+<div class="box">
+	<div class="content"></div>
+</div>
+<div class="btn">点我</div>
+<script type="text/javascript">
+	var body = document.querySelector('body');
+	var btn  = document.querySelector('.btn');
+	var box  = document.querySelector('.box');
+
+	btn.addEventListener('click',function(){
+		body.style.overflow = 'hidden';
+		box.style.display = 'block';
+	})
+</script>
+</body>
+</html>
